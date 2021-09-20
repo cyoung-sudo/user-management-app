@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/*===== Variables =====*/
+:root {
+  --dark: black;
+  --light: white;
+  --light2: whitesmoke;
+  --contrast: silver;
+  --color: steelblue;
+}
+
+/*===== Base =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Includes padding & border to element height/width */
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/*===== Navigation =====*/
+#nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--dark);
+}
+
+#nav-brand {
+  color: var(--light);
+}
+
+/*===== Main =====*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  min-height: 80vh;
+}
+
+.main-btn {
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+/*===== Users Table =====*/
+#all-users {
+  margin-top: 1.5rem;
+  width: 80%;
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #all-users {
+    width: 100%;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center
+}
+
+tr:nth-child(even){
+  background-color: var(--light2);
+}
+
+th, td {
+  padding: 0.7rem;
+  white-space: nowrap;
+}
+
+th {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.table-update, .table-delete {
+  display: inline-block; /* For transform scale */
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: var(--color);
+}
+
+/*===== Add/Update User Forms =====*/
+#add-user, #update-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  width: 60%;
+  border-radius: 5px;
+  background-color: var(--light2);
+}
+
+label[for="name"], label[for="email"] {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-title {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.form-title p {
+  margin-top: 0.3rem;
+}
+
+.form-group {
+  margin: 1rem;
+  width: 100%;
+}
+
+#update-user .form-group input[type="text"],
+#add-user .form-group input[type="text"] {
+  padding: 0.3rem 0.5rem;
+  width: 100%;
+}
+
+.radio-wrapper {
+  display: inline;
+}
+
+@media only screen and (max-width: 768px) {
+  #add-user, #update-user {
+    width: 90%;
+  }
+
+  label[for="gender"], label[for="status"] {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .radio-wrapper {
+    display: flex;
+    justify-content: center
+  }
+}
+
+.form-radio {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.form-submit {
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+/*===== Effects =====*/
+a {
+  text-decoration: none;
+}
+
+#nav-brand, .main-btn, .sortable-header, .user-record, .table-update, .table-delete, .form-submit {
+  transition: all .3s ease-in-out;
+}
+
+#nav-brand:hover, .main-btn:hover, .form-submit:hover {
+  transform: scale(1.05, 1.1);
+}
+
+.user-record:hover {
+  background-color: var(--contrast);
+  color: var(--light);
+}
+
+.table-update:hover, .table-delete:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.sortable-header, .table-delete, .form-submit {
+ cursor: pointer;
+}
+
+/*===== Font weights =====*/
+.txt-thin {
+  font-weight: 100;
+}
+
+.txt-light {
+  font-weight: 300;
+}
+
+.txt-medium {
+  font-weight: 500;
+}
+
+.txt-bold {
+  font-weight: 700;
+}

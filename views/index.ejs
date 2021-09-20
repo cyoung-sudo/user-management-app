@@ -1,0 +1,31 @@
+<!-- include header -->
+<%- include("include/_header") %>
+
+<!-- main -->
+<main>
+    <div class="main-container">
+        <a href="/add-user" class="main-btn">New User <span><i class="fas fa-user"></i></span></a>
+
+        <form action="/" method="POST" id="all-users">
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th class="sortable-header">ID</th>
+                        <th class="sortable-header">Name</th>
+                        <th class="sortable-header">Email</th>
+                        <th class="sortable-header">Gender</th>
+                        <th class="sortable-header">Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- include users table -->
+                    <%- include("include/_show") %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+
+<!-- include footer -->
+<%- include("include/_footer") %>

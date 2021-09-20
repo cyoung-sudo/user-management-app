@@ -1,0 +1,17 @@
+<% for(let i=0; i<users.length; i++) { %>
+<tr class="user-record">
+  <td><%= i + 1 %></td>
+  <td><%= users[i].name %></td>
+  <td><%= users[i].email %></td>
+  <td><%= users[i].gender %></td>
+  <td><%= users[i].status %></td>
+  <td>
+      <a href="/update-user?id=<%= users[i]._id %>" class="table-update">
+          <span><i class="fas fa-edit"></i></span>
+      </a>
+      <a class="table-delete" data-id=<%= users[i]._id %>>
+          <span><i class="fas fa-trash"></i></span>
+      </a>
+  </td>
+</tr>
+<% } %>
