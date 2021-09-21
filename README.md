@@ -1,8 +1,18 @@
 # User Management App
-
-## Preview
+An app that allows you to create, update, and delete a list of users. Keep track of a user's name, email, gender, and status in a sortable table.
 
 ## Website Link
+[Heroku Link](https://user-management-app-87972.herokuapp.com/)
+
+## Preview
+Homepage layout
+![Preview1](/images/preview1.png)
+
+New user form
+![Preview2](/images/preview2.png)
+
+Update user form
+![Preview3](/images/preview3.png)
 
 ## Programming Languages
 * HTML
