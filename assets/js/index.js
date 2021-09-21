@@ -1,6 +1,3 @@
-// Dynamic base-url for production
-const url = (process.env.NODE_ENV ? process.env.PRODUCTION_BASEURL : process.env.DEVELOPMENT_BASEURL);
-
 $("#add-user").submit(function(event) {
   alert("Data inserted successfully")
 })
@@ -19,7 +16,7 @@ $("#update-user").submit(function(event) {
   })
 
   let request = {
-    "url": `${url}api/users/${data.id}`,
+    "url": `/api/users/${data.id}`,
     "method": "PUT",
     "data": data
   }
@@ -36,7 +33,7 @@ if(window.location.pathname == "/") {
     let id = $(this).attr("data-id")
 
     let request = {
-      "url": `${url}api/users/${id}`,
+      "url": `/api/users/${id}`,
       "method": "DELETE",
     }
 
